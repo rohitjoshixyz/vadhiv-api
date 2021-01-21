@@ -6,9 +6,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.1'
+gem 'rails', '~> 6.0.0'
 # Use Puma as the app server
-gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git', branch: 'master'
+gem 'mongoid', '~> 7.0.5'
 gem 'puma', '~> 5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
@@ -32,7 +32,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'database_cleaner'
+  gem 'database_cleaner-mongoid'
+  gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'faker'
 end
